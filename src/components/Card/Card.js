@@ -7,10 +7,14 @@ function Card(props) {
     const {card} = props;
 
     return (
-        <li className="card-item">
-            {card.cover && <img src={card.cover} alt="Ảnh FB" />}
+        <div className="card-item">
+            {card.cover && 
+                <img src={card.cover} 
+                    alt="Ảnh FB" 
+                    onMouseDown={e => e.preventDefault}
+                />}
             {card.title}
-        </li>
+        </div>
     )
 }
 
