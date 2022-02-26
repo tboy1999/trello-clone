@@ -15,6 +15,11 @@ body {
 .trello {
     height: 100vh;
     overflow: hidden;
-    
     background-color: $primary-color; 
+    color: $app-main-text-color
+}
+
+i {
+    font-size: 14px;
+    margin-right: 4px;
 }
