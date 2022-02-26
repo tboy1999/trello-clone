@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React from "react";
 import { Container, Draggable } from 'react-smooth-dnd';
 
 import './Column.scss'
