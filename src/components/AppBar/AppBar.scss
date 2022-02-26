@@ -3,6 +3,7 @@
 $appbar-color: #0067bf;
 
 .navbar-app {
+    height: $navbar-app-height;
     background-color: $appbar-color;
     font-size: 1.5rem;
     padding-left: $gap;

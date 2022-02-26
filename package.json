@@ -38,6 +38,7 @@
     ]
   },
   "devDependencies": {
-    "lodash": "^4.17.21"
+    "lodash": "^4.17.21",
+    "react-smooth-dnd": "^0.11.1"
   }
 }
