@@ -33,6 +33,14 @@ $column-height: calc(#{$board-content-height} - #{$gap * 2});
         font-size: 16px;
         border-bottom-left-radius: $column-border-radius;
         border-bottom-right-radius: $column-border-radius;
+        color: #888;
+        .footer-action {
+            margin-left: $gap;
+            cursor: pointer;
+            &:hover {
+                color: $app-main-text-color;
+            }
+        }
     }
 
     div.card-list {
@@ -48,5 +56,24 @@ $column-height: calc(#{$board-content-height} - #{$gap * 2});
             background-color: darken($list-color, 15);
             border-right: 5px solid $list-color
         }
+
+        .card-ghost {
+            transition: transform 0.18s ease;
+            transform: rotateZ(5deg);
+            font-weight: bold;
+          }
+          
+        .card-ghost-drop{
+            transition: transform 0.18s ease-in-out;
+            transform: rotateZ(0deg);
+            font-weight: bold;
+        }
+
+        .card-drop-preview {
+            background-color: rgba(150, 150, 200, 0.1);
+            border: 1px dashed #abc;
+            margin: 5px;
+          }
+          
     }
 }

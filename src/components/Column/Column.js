@@ -5,15 +5,15 @@ import './Column.scss'
 
 import Card from '../Card/Card'
 
+import 'font-awesome/css/font-awesome.min.css';
+
 import { mapOrder } from "utilities/sorts";
 
 function Column(props) {
-    const { column } = props
+    const { column, onCardDrop } = props
     const cards = mapOrder(column.cards, column.cardOrder, 'id')
     
-    const onCardDrop = (dropResult) => {
-      console.log(dropResult)
-    }
+    
 
     return (       
         <div className="column">
@@ -23,7 +23,7 @@ function Column(props) {
               {...column.props}
               groupName="col"
               orientation="vertical"
-              onDrop={onCardDrop}
+              onDrop={dropResult => onCardDrop(column.id, dropResult)}
               getChildPayload={index => cards[index]}
               dragClass="card-ghost"
               dropClass="card-ghost-drop"
@@ -42,7 +42,9 @@ function Column(props) {
             </Container>
           </div>
           <footer>
-            add another card
+            <div className="footer-action">
+              <i className="fa fa-plus"/> add another card
+            </div>
           </footer>
         </div>
     )
