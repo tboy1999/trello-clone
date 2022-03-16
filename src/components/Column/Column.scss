@@ -19,7 +19,7 @@ $column-height: calc(#{$board-content-height} - #{$gap * 2});
     header {
         padding-left: 15px;
         height: $column-header-height;   
-        line-height: 36px;
+        line-height: $column-header-height;
         font-size: 16px;
         font-weight: bold;
         border-top-left-radius: $column-border-radius;
