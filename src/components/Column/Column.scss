@@ -17,13 +17,57 @@ $column-height: calc(#{$board-content-height} - #{$gap * 2});
     }
 
     header {
-        padding-left: 15px;
+        padding: 5px 8px;
         height: $column-header-height;   
         line-height: $column-header-height;
         font-size: 16px;
         font-weight: bold;
         border-top-left-radius: $column-border-radius;
         border-top-right-radius: $column-border-radius;
+        display: flex;
+        .column-title {
+            flex: 90%;
+        }
+        .column-dropdown-actions {
+            flex: 10%;
+            .dropdown {
+                .dropdown-btn {
+                    padding: 0 $gap;
+                    font-size: 16px;
+                    font-weight: bold;
+                    letter-spacing: 1px;
+                    height:32px;
+                    margin-top: -15px;
+                    background-color: $list-color;
+                    border-color: $list-color;
+                    color: $app-main-text-color;
+                    
+                    &:after {
+                        content: "...";
+                        border: none;
+                        
+                    }
+
+                    &:hover {
+                        background-color: darken($list-color, 10);
+                        border-color: darken($list-color, 10)
+                    }
+                }
+            }
+            
+
+            .dropdown-menu {
+                min-width: 200px;
+                padding: 0;
+                a.dropdown-item {
+                    padding: 0.1rem 1rem;
+                    font-size: 14px;
+                    &:not(:last-child) {
+                        border-bottom: 1px solid $list-color;
+                    }
+                }
+            }
+        }
     }
 
     footer {
