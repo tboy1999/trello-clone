@@ -23,16 +23,45 @@
         margin: 5px 45px 5px 5px;
     }
 
-    .add-ner-column {
+    .add-new-column {
         width: 250px;
-        height: 32px;
+        max-width: 250px;
         line-height: 32px;
-        padding: 4px 0 4px 15px;
+        padding-left: 15px;
         cursor: pointer;
         color: #fff;
         margin-left: $gap;
         font-size: 15px;
-        background-color: hsla(0, 0%, 100%, .24);
+        background-color: hsla(0, 0%, 100%, 0.24);
         border-radius: $column-border-radius;
+        &:hover {
+            background-color: hsla(0, 0%, 100%, 0.34)
+        }
+
+        
+    }
+    .enter-new-column {
+        width: 250px;
+        max-width: 250px;
+        line-height: 32px;
+        background-color: $list-color;
+        padding: 4px 10px;
+        border-radius: $column-border-radius;
+        margin-left: $gap;
+        input.input-enter-new-column {
+            margin: 5px 0;
+        }
+
+        span.cancel-new-column {
+            cursor: pointer;
+            margin-left: $gap;
+            i {
+                font-size: 18px;
+                color: $alert-danger;
+                &:hover {
+                    color: darken($alert-danger, 10)
+                }
+            }
+        }
     }
 }

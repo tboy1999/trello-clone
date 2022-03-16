@@ -15,7 +15,7 @@ export const initialData = {
                             boardId: 'board-1',
                             columnId: 'column-1',
                             title: 'Title of card 1',
-                            cover: 'https://scontent.fhph2-1.fna.fbcdn.net/v/t1.6435-9/165920766_821687182035913_7094347760392708738_n.jpg?_nc_cat=111&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=SCGW9ocQkTUAX8SmPcs&tn=6-g9c08qWH3uZxPx&_nc_ht=scontent.fhph2-1.fna&oh=00_AT_OscIzizxr_KIorBaGYsj9LExTSNl2yrBYAP4GxJNiFg&oe=622E105B'
+                            cover: 'https://scontent.fhph2-1.fna.fbcdn.net/v/t1.6435-9/165920766_821687182035913_7094347760392708738_n.jpg?_nc_cat=111&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=bic2XYSAHTMAX8pDcvF&_nc_ht=scontent.fhph2-1.fna&oh=00_AT9NOhOmjVoGZK8ZzRTvtLfYmZxSY7BpM93KBe6rAgPbaQ&oe=62559D5B'
                         },
                         {id: 'card-2', boardId: 'board-1', columnId: 'column-1', title: 'Title of card 2', cover: null},
                         {id: 'card-3', boardId: 'board-1', columnId: 'column-1', title: 'Title of card 3', cover: null},
