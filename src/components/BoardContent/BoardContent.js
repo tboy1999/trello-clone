@@ -1,4 +1,4 @@
-import { useEffect, useState, useRef, useCallback} from "react";
+import { useEffect, useState, useRef} from "react";
 import { Container, Draggable } from 'react-smooth-dnd';
 import { isEmpty } from "lodash";
 
@@ -22,7 +22,7 @@ function BoardContent() {
   const newColumnInputRef = useRef(null)
 
   const [newColumnTitle, setNewColumnTitle] = useState('')
-  const onNewColumnTitleChange = useCallback((e) => setNewColumnTitle(e.target.value), [])
+  const onNewColumnTitleChange = (e) => setNewColumnTitle(e.target.value)
 
   useEffect(() => {
     const boardFormDB = initialData.boards.find(board => board.id === 'board-1')
@@ -66,9 +66,8 @@ function BoardContent() {
     }
   }
 
-  const toggleNewColumnForm = () => {
-    setOpenNewColumnForm(!openNewColumnForm)
-  }
+  const toggleNewColumnForm = () => setOpenNewColumnForm(!openNewColumnForm)
+  
 
   const addNewColumn = () => {
     if (!newColumnTitle) {
@@ -114,6 +113,7 @@ function BoardContent() {
     newBoard.columns = newColumns
     setBoard(newBoard)
   }
+  
   return (
     <div className="board-content">
       <Container
@@ -129,7 +129,11 @@ function BoardContent() {
       >
         {column.map((column,index) => (
           <Draggable key={index}>
-            <Column column={column} onCardDrop={onCardDrop} onUpdateColumn={onUpdateColumn}/>
+            <Column 
+              column={column} 
+              onCardDrop={onCardDrop} 
+              onUpdateColumn={onUpdateColumn}
+            />
           </Draggable>
           )
         )}
@@ -159,7 +163,7 @@ function BoardContent() {
                 onKeyDown={event => (event.key === 'Enter') && addNewColumn()}
               />
               <Button variant="success" size="sm" onClick= {addNewColumn}>Add column</Button>
-              <span className="cancel-new-column" onClick={toggleNewColumnForm}>
+              <span className="cancel-icon" onClick={toggleNewColumnForm}>
                 <i className="fa fa-trash icon"></i>
               </span>
             </Col>
